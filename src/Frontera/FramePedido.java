@@ -53,6 +53,7 @@ public class FramePedido extends javax.swing.JPanel {
         nuevo.timeLabel();
         nuevo.comboPer();
         nuevo.comboRes();
+        nuevo.vaciarCom();
         nuevo.inhabilitarCom();
         nuevo.vaciarCampos();
         back.setVisible(true);
@@ -60,7 +61,7 @@ public class FramePedido extends javax.swing.JPanel {
         nuevo.nuevoVisible();
     }
 
-    public void verMenu() {
+    public void verPedido() {
         principalPedido.setVisible(false);
         principalPedido.removeAll();
         principalPedido.add(ver);
@@ -249,11 +250,11 @@ public class FramePedido extends javax.swing.JPanel {
     }//GEN-LAST:event_editarMouseClicked
 
     private void pedidoVerIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedidoVerIconMouseClicked
-        verMenu();
+        verPedido();
     }//GEN-LAST:event_pedidoVerIconMouseClicked
 
     private void pedidoVerLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedidoVerLabelMouseClicked
-        verMenu();
+        verPedido();
     }//GEN-LAST:event_pedidoVerLabelMouseClicked
 
     private void pedidoNuevaLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedidoNuevaLabelMouseClicked

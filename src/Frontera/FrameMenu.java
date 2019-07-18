@@ -67,6 +67,7 @@ public final class FrameMenu extends javax.swing.JPanel {
         principalMenu.setVisible(true);
         nuevo.comboRes();
         nuevo.comboFec();
+        nuevo.comboDes();
         nuevo.vaciarCampos();
         ver.verMenu();
         back.setVisible(true);

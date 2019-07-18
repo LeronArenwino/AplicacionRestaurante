@@ -10,6 +10,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     private final FrameMenu menu = new FrameMenu();
     private final FrameMenuP menup = new FrameMenuP();
     private final FramePedido pedido = new FramePedido();
+    private final FrameCosto costo = new FrameCosto();
     private final Dialogo dialogo = new Dialogo(null, true);
     
     public static Sistema sistema = new Sistema();
@@ -149,12 +150,24 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/smartphone.png"))); // NOI18N
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
         inicioPrincipal.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 330, 150, 130));
 
         restauranteLabel2.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 1, 24)); // NOI18N
         restauranteLabel2.setForeground(new java.awt.Color(36, 56, 63));
         restauranteLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         restauranteLabel2.setText("SOBRE COSTOS");
+        restauranteLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        restauranteLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                restauranteLabel2MouseClicked(evt);
+            }
+        });
         inicioPrincipal.add(restauranteLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 460, 170, 30));
 
         restauranteLabel3.setFont(new java.awt.Font("Franklin Gothic Medium Cond", 1, 24)); // NOI18N
@@ -307,6 +320,14 @@ public class FramePrincipal extends javax.swing.JFrame {
     private void restauranteLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_restauranteLabel3MouseClicked
         ver(pedido);
     }//GEN-LAST:event_restauranteLabel3MouseClicked
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        ver(costo);
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void restauranteLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_restauranteLabel2MouseClicked
+        ver(costo);
+    }//GEN-LAST:event_restauranteLabel2MouseClicked
 
     /**
      * @param args the command line arguments

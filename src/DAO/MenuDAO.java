@@ -85,22 +85,23 @@ public class MenuDAO {
         return menTa;
     }
 
-    public void editar(int resta, String desc, String com1, String com2, String com3, String com4, String com5, String com6, String com7, int id) {
+    public void editar(int resta, String desc, String dia, String com1, String com2, String com3, String com4, String com5, String com6, String com7, int id) {
 
-        String sqlAsi = "UPDATE MENU SET idRes = ?, descrip = ?, com1 = ?, com2 = ?, com3 = ?, com4 = ?, com5 = ?, com6 = ?, com7 = ? WHERE menID = ?;";
+        String sqlAsi = "UPDATE MENU SET idRes = ?, descrip = ?, dia = ?, com1 = ?, com2 = ?, com3 = ?, com4 = ?, com5 = ?, com6 = ?, com7 = ? WHERE menID = ?;";
 
         try {
             PreparedStatement ps = Conectado.prepareStatement(sqlAsi);
             ps.setInt(1, resta);
             ps.setString(2, desc);
-            ps.setString(3, com1);
-            ps.setString(4, com2);
-            ps.setString(5, com3);
-            ps.setString(6, com4);
-            ps.setString(7, com5);
-            ps.setString(8, com6);
-            ps.setString(9, com7);
-            ps.setInt(10, id);
+            ps.setString(3, dia);
+            ps.setString(4, com1);
+            ps.setString(5, com2);
+            ps.setString(6, com3);
+            ps.setString(7, com4);
+            ps.setString(8, com5);
+            ps.setString(9, com6);
+            ps.setString(10, com7);
+            ps.setInt(11, id);
             ps.executeUpdate();
             ps.close();
         } catch (SQLException ex) {

@@ -193,7 +193,7 @@ public class NuevoMenu extends javax.swing.JPanel {
                             dialogoOk.textoLabel(respuesta);
                             dialogoOk.visible();
                         } else {
-                            daoMen.editar(Integer.parseInt(menu.getRestaurante()), menu.getDescripcion(), menu.getComida1(), menu.getComida2(), menu.getComida3(), menu.getComida4(), menu.getComida5(), menu.getComida6(), menu.getComida7(), filaU);
+                            daoMen.editar(Integer.parseInt(menu.getRestaurante()), menu.getDescripcion(), menu.getDia(), menu.getComida1(), menu.getComida2(), menu.getComida3(), menu.getComida4(), menu.getComida5(), menu.getComida6(), menu.getComida7(), filaU);
                             vaciarCampos();
                             dialogoOk.textoLabel(respuesta);
                             dialogoOk.visible();
@@ -259,7 +259,7 @@ public class NuevoMenu extends javax.swing.JPanel {
             comDes.setVisible(true);
         }
         if ("Ninguno".equals(comRes.getSelectedItem().toString())) {
-            loadDes();            
+            loadDes();
         }
     }
 
